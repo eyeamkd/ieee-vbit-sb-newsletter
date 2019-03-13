@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>IEEE News Letter</title>
+<style>
+/* Content Flip Style */
+.bb-bookblock {
+	width: 400px;
+	height: 300px;
+	position: relative;
+	background: #fff;
+	z-index: 100;
+}
+
+.bb-page {
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	position: absolute;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.bb-page > div,
+.bb-outer,
+.bb-content {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.bb-content {
+	background: #fff;
+}
+
+.bb-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.bb-overlay, .bb-outer {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-page > div {
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-back {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.bb-outer {
+	width: 100%;
+	overflow: hidden;
+	z-index: 999;
+}
+
+.bb-overlay, 
+.bb-flipoverlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1000;
+}
+
+.bb-flipoverlay {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bb-bookblock > div.bb-page:first-child,
+.bb-bookblock > div.bb-page:first-child .bb-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.js .bb-item {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	background: #fff;
+}
+
+
+
+
+
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+
+/* Custom Style */
+
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane {
+	position: absolute;
+	width: 100% !important;
+	left: 0 !important;
+}
+
+.jspVerticalBar {
+	position: absolute;
+	top: 0px;
+	right: 1%;
+	width: 9px;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+}
+
+.jspContainer:hover .jspVerticalBar {
+	opacity: 1;
+}
+
+.jspCap {
+	display: block;
+	background: #fff;
+}
+
+.jspVerticalBar .jspCap {
+	height: 40px;
+}
+
+.jspTrack {
+	background: rgba(242,242,242,0.5);
+	box-shadow: inset 0 0 1px rgba(0,0,0,0.1), inset 1px 0 4px rgba(0,0,0,0.05);
+	border-radius: 10px;
+	position: relative;
+}
+
+.jspDrag {
+	background: #fff;
+	position: relative;
+	box-shadow: inset -1px 0 8px rgba(0,0,0,0.05);
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	border: 1px solid #f0f0f0;
+	cursor: pointer;
+}
+
+.jspCorner {
+	background: #fff;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+	margin: 0 -3px 0 0;
+}
+</style>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html { height: 100%; }
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	background: #fff;
+	font-weight: 400;
+	font-size: 100%;
+	color: #333;
+	height: 100%;
+}
+
+.js body {
+	overflow: hidden;
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.container,
+.bb-custom-wrapper,
+.bb-bookblock {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	position: relative;
+	left: 0px;
+	-webkit-transition: left 0.3s ease-in-out;
+	-o-transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
+}
+
+.slideRight {
+	left: 240px;
+}
+
+.no-js .container {
+	padding-left: 240px;
+}
+
+.menu-panel {
+	background: #0152A1;
+	width: 240px;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.js .menu-panel {
+	position: absolute;
+	left: -240px;
+}
+
+.menu-panel h3 {
+	font-size: 1.8em;
+	padding: 20px;
+	font-weight: 300;
+	color: #fff;
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+} 
+
+.menu-toc {
+	list-style: none;
+}
+
+.menu-toc li a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	line-height: 3.5;
+	padding: 0 20px;
+	cursor: pointer;
+	background: #0152A1;
+	border-bottom: 1px solid #18528b;
+}
+
+.menu-toc li a:hover,
+.menu-toc li.menu-toc-current a{
+	background: #18528b;
+}
+
+.menu-panel div {
+	margin-top: 20px;
+}
+
+.menu-panel div a {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	line-height: 1;
+	padding: 5px 20px;
+	display: block;
+	border: none;
+	color: #bc0b0b;
+	letter-spacing: 1px;
+	font-weight: 800;
+	text-shadow: 0 1px rgba(255,255,255,0.2);
+} 
+
+.menu-panel div a:hover {
+	background: inherit;
+	color: #fff;
+	text-shadow: none;
+}
+
+.bb-custom-wrapper nav {
+	top: 20px;
+	left: 60px;
+	position: absolute;
+	z-index: 1000;
+}
+
+.bb-custom-wrapper nav span,
+.menu-button {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 0;
+	left: 0;
+	background: #0152A1;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	speak: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.bb-custom-wrapper nav span:hover,
+.menu-button:hover {
+	background: #000;
+}
+
+.bb-custom-wrapper nav span:last-child {
+	left: 40px;
+}
+
+.menu-button {
+	z-index: 1000;
+	left: 20px;
+	top: 20px;
+	text-indent: -9000px;
+}
+
+.menu-button:after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 2px;
+	background: #fff;
+	top: 50%;
+	margin-top: -1px;
+	left: 25%;
+	box-shadow: 0 -4px #fff, 0 4px #fff;
+}
+
+.no-js .bb-custom-wrapper nav span,
+.no-js .menu-button {
+	display: none;
+}
+
+.js .content {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	bottom: 50px;
+	overflow: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.scroller {
+	padding: 10px 5% 10px 5%;
+}
+
+.js .content:before,
+.js .content:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	z-index: 100;
+	pointer-events: none;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.js .content:after {
+	top: auto;
+	bottom: 0;
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.content .tophea {
+	font-weight: 300;
+	font-size: 1.5em;
+	padding: 0 0 10px;
+	color: #333;
+	margin: 0 1% 40px;
+	text-align: left;
+	box-shadow: 0 10px 0 rgba(0,0,0,0.02);
+	text-shadow: 0 0 2px #fff;
+}
+
+.no-js .content h2 {
+	padding: 40px 1% 20px;
+}
+
+.content p {
+	font-size: 1.2em;
+	line-height: 1.6;
+	font-weight: 300;
+	padding: 5px 8%;
+	text-align: justify;
+}
+
+
+
+
+/*Team*/
+
+.avatar {
+  width: 50%;
+  display: block;
+  border-radius: 50%;
+  margin: 0 25%;
+}
+
+/*Grid*/
+.grid-full {
+  width: 100%;
+  float: left;
+}
+.grid-half {
+  width: 50%;
+  float: left;
+}
+.grid-third {
+  width: 27.33333%;
+  margin: 0 3%;
+  float: left;
+}
+.grid-fourth {
+  width: 25%;
+  float: left;
+}
+.grid-fifth {
+  width: 20%;
+  float: left;
+}
+.row {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+	.no-js .menu-panel {
+		display: none;
+	}
+
+	.no-js .container {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.menu-panel,
+	.content {
+		font-size: 75%;
+	}
+}
+
+</style>
+<script>
+/* Modernizr 2.6.1 (Custom Build) | MIT & BSD
+ * Build: http://modernizr.com/download/#-cssanimations-csstransforms-csstransforms3d-csstransitions-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load
+ */
+;window.Modernizr=function(a,b,c){function z(a){j.cssText=a}function A(a,b){return z(m.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&&j[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+o.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+p.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.6.1",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n="Webkit Moz O ms",o=n.split(" "),p=n.toLowerCase().split(" "),q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var f,i,j,k=b.createElement("div"),l=b.body,m=l?l:b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),k.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),k.id=h,(l?k:m).innerHTML+=f,m.appendChild(k),l||(m.style.background="",g.appendChild(m)),i=c(k,a),l?k.parentNode.removeChild(k):m.parentNode.removeChild(m),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&&!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&&B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:w(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},q.cssanimations=function(){return F("animationName")},q.csstransforms=function(){return!!F("transform")},q.csstransforms3d=function(){var a=!!F("perspective");return a&&"webkitPerspective"in g.style&&w("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}",function(b,c){a=b.offsetLeft===9&&b.offsetHeight===3}),a},q.csstransitions=function(){return F("transition")};for(var G in q)y(q,G)&&(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),i=k=null,function(a,b){function k(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function l(){var a=r.elements;return typeof a=="string"?a.split(" "):a}function m(a){var b=i[a[g]];return b||(b={},h++,a[g]=h,i[h]=b),b}function n(a,c,f){c||(c=b);if(j)return c.createElement(a);f||(f=m(c));var g;return f.cache[a]?g=f.cache[a].cloneNode():e.test(a)?g=(f.cache[a]=f.createElem(a)).cloneNode():g=f.createElem(a),g.canHaveChildren&&!d.test(a)?f.frag.appendChild(g):g}function o(a,c){a||(a=b);if(j)return a.createDocumentFragment();c=c||m(a);var d=c.frag.cloneNode(),e=0,f=l(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function p(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return r.shivMethods?n(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+l().join().replace(/\w+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(r,b.frag)}function q(a){a||(a=b);var c=m(a);return r.shivCSS&&!f&&!c.hasCSS&&(c.hasCSS=!!k(a,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")),j||p(a,c),a}var c=a.html5||{},d=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,e=/^<|^(?:a|b|button|code|div|fieldset|form|h1|h2|h3|h4|h5|h6|i|iframe|img|input|label|li|link|ol|option|p|param|q|script|select|span|strong|style|table|tbody|td|textarea|tfoot|th|thead|tr|ul)$/i,f,g="_html5shiv",h=0,i={},j;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",f="hidden"in a,j=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){f=!0,j=!0}})();var r={elements:c.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:c.shivCSS!==!1,supportsUnknownElements:j,shivMethods:c.shivMethods!==!1,type:"default",shivDocument:q,createElement:n,createDocumentFragment:o};a.html5=r,q(b)}(this,b),e._version=d,e._prefixes=m,e._domPrefixes=p,e._cssomPrefixes=o,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,e.prefixed=function(a,b,c){return b?F(a,b,c):F(a,"pfx")},g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+t.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
+
+
+</script>
+	</head>
+	<body>
+		<div id="container" class="container">	
+
+			<div class="menu-panel" style="overflow-y: scroll;">
+				<h3>Table of Contents</h3>
+				<ul id="menu-toc" class="menu-toc">
+					<li class="menu-toc-current"><a href="#item1">Contributors</a></li>
+					<li><a href="#item2">IEEE - Advancing Technology for Humanity</a></li>
+					<li><a href="#item3">IEEE - VBIT SB </a></li>
+					<li><a href="#item4">From the Branch Counselor</a></li>
+					<li><a href="#item5">An Epitome of our Events</a></li>
+					<li><a href="#item6">Inceptra</a></li>
+					<li><a href="#item7">Layers of my Canvas</a></li>
+					<li><a href="#item8"> SS12 Experience</a></li>
+					<li><a href="#item9">Competitive Programming</a></li>
+					<li><a href="#item10">Upsilon Pi Epsilon</a></li>
+					<li><a href="#item11">Smartphone 101</a></li>
+					<li><a href="#item12">IEEE Membership</a></li>
+					
+				</ul>
+			</div>
+
+			
+	<div class="bb-custom-wrapper">
+			<div id="bb-bookblock" class="bb-bookblock">
+			<div class="bb-item" name="item1" id="item1">
+			<div class="content">
+			<div class="scroller">
+			<div class="tophea">
+			<h2>Contributors<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="150" style="float:right; padding-left:10px;"></h2> 
+			<br>
+			</div>
+			<div style="box-sizing: border-box;">
+			 <div class="main row">
+			<div class="grid-full">
+			  <div class="grid-fifth"> 
+			<img src="https://instagram.fhyd8-1.fna.fbcdn.net/vp/0be8b3fa20c08a6f2f7283e198145cc7/5D0BE372/t51.2885-15/sh0.08/e35/s640x640/43182719_1150407118469607_4329549390196907676_n.jpg?_nc_ht=instagram.fhyd8-1.fna.fbcdn.net" alt="" class="avatar" />
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;<h3 style="padding-left:60px; font-size:2vw;">Kaustubh Eppalapalli</h3>
+			<p style="padding-left:65px; font-size:2vw;">Newsletter Lead</p>
+			
+			  </div><!--/1-->
+			  <div class="grid-fifth">
+			<img src="https://instagram.fhyd8-1.fna.fbcdn.net/vp/37bd6e8228ce95a4c41a53785b10b9ab/5D14F1BE/t51.2885-19/s150x150/20347751_1765059713523988_2590322586130841600_a.jpg?_nc_ht=instagram.fhyd8-1.fna.fbcdn.net" alt="" class="avatar"  />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h3 style="padding-left:60px; font-size:2vw;">Kunal Dubey</h3>
+			<p style="padding-left:65px; font-size:2vw;">Web Designer</p> 
+			  </div><!--/2-->
+			 
+			  
+			</div>
+			</div><!--/main-->
+			</div><br><br><br><br><br>
+			<span style="font-size:1.25em; font-weight:bold; padding: 50px; "> 
+			<center>
+			MOTTO 
+		</center>
+			</span>
+			<p>The prime objective of this newsletter is to provide and share technical information to the readers on contemporary
+			technology. This is a platform for students to share their views and opinions regarding professional skills. It is a 
+			window into the world of IEEE and trending subjects in the present day perspective. Through this newsletter we intend to 
+			bring into light the events conducted by our division.</p>
+			</div>
+			</div>
+			</div>
+					<div class="bb-item" id="item2">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>IEEE - Advancing Technology for Humanity <img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>
+									<p>
+									IEEE (Institute of Electrical and Electronics Engineers) is an internationally renowned, non-profitable professional organization. 
+									It is the world's largest association of technical professionals across the globe dedicated to technology for the benefit of humanity. IEEE and its members inspire a global community to innovate
+									for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities. IEEE is the trusted “voice” for engineering, computing and technology information around the globe.
+									
+									</p>
+									<br>
+									
+									
+									<p>There are more than 420,000 IEEE members in more than 160 countries. IEEE publishes a third of the world’s technical literature in electrical engineering, computer science and electronics and is a leading developer of international standards that underpin
+									many of today's telecommunications, information technology and power generation products and services.
+									</p>
+									<br>
+									<div><p>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of humanity, is the world’s largest technical professional society. It is designed to serve professionals involved in all aspects of the electrical, electronic, and computing fields and related areas of science and technology that underlie modern civilization.</p></div>
+									<div><p>IEEE has a dual complementary regional and technical structure with organizational units based on geography and technical focus. It manages a separate organizational unit (IEEE-USA) which recommends policies and implements programs specifically intended to benefit the members, the profession, and the public in the United States.</p></div>
+									
+
+
+
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item3">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>IEEE - VBIT SB <img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>
+								<!--<center>
+								<img src="http://1.bp.blogspot.com/-TKrCEcNbzeo/VaW7rCllTsI/AAAAAAAABOk/u3VIQkszFEU/s1600/11713812_825897764162719_4656347835998255579_o.jpg" alt="IEEE Exemplary Branch"
+								style="width:48%; float:left; padding:10px;"></center>-->
+								
+								<p> The Student Branch took its birth in the year 2006 December with branch strength of 42 members. Among 400,000 members from 160 different countries and numerous chapters, the student branch of IEEE-VBIT has managed to carve a niche for itself by adding to the advancement of technological innovation. 
+								IEEE always caters the best opportunities to the students who possess the zeal to better the world with the help of technology. 
+								IEEE-VBIT SB has always stood out for fostering the better side of the individual by conducting various programs thereby developing their 
+								professional skills. </p>
+								
+								<br>
+								<p>IEEE Student Branch at VBIT has never failed to stand out from the rest and has simply been the Best. The constant zeal of our volunteers to contribute to the Student Branch has earned accolades and high recognition at Section level as well as at Regional level. 
+								Ever since its inception in 2006, IEEE-VBIT SB has never turned back and has reached admirable heights.</p>
+								
+								<br>
+								<p>From receiving the Darrel Chong Gold Award for student activities, to IEEE Regional Exemplary Student Branch Award for the year 2014-2015, to the most recent Upsilon Pi Epsilon Award in the year 2016, IEEE-VBIT SB has come a long way. All this success wouldn't have been possible without the abiding support 
+								served by the college fraternity, infinite efforts and the innovative ideas of our volunteers.</p>
+								
+								
+								
+								<p><strong> MISSION:</strong> The IEEE-VBIT SB promotes technical awareness amongst its college students and helps to cultivate the same interest in the other colleges. The student Branch emphasizes on conducting activities which can develop the technical cognition of a student and also to foster
+								leadership skills.</p>
+								
+								
+								
+								<p><strong>VISION:</strong>The IEEE-VBIT SB encourages the student members to focus on research and development promoting the establishment of IEEE Student Branches in colleges which does not have an IEEE SB. To Motivate and encourage students to present papers at different technical conferences and participate in the events and competitions conducted by IEEE. 
+								Contribute to the society by adopting local school and involvement in charitable events.</p>
+								
+								</div>
+							</div>
+							
+						</div>
+								
+								
+					
+					
+					<div class="bb-item" id="item4">
+						<div class="content">
+							<div class="scroller">
+									<div class="tophea">
+											<h2>From the Branch Counsellor<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px; margin-bottom: 20px;"></h2>
+										</div>
+								<p>The connect with IEEE form the year 2014 as a branch advisor for the CSE and IT departments was a great start to this overwhelming journey with IEEE VBIT – SB to now being the Branch Counselor. The IEEE VBIT student branch is so far the most vibrant branch that I have witnessed. It has been a great privilege to work with pride along the SB from Avishkar to Aakar. Avishkar is the one flagship event conducted every year
+								by IEEE VBIT – SB that has now completed its cherishing 10 year journey which adds up to the glorious 10th year SB celebration.</p>
+								<br>
+								<p> 
+									My journey with the excelling student branch has always created a masterpiece year by year. It is my utmost privilege to be able to conduct various kinds of humongous events that help explore innovations of the student community. There are a wide variety of events that IEEE VBIT – SB conducts some of which are seminars, workshops, coding competitions, technical gabfests, colloquiums, industrial visits, nontechnical events, etc. IEEE VBIT SB
+									is recognized for not just in organizing a variety of events but also by the wide range of awards that the student branch has bagged. 
+								</p> 
+									<hr> 
+								<p style="text-align: right">
+									<i> 
+										<b> 
+											Mr. M. Venkateshwara Rao<br>
+											Branch Counselor, <br>
+											IEEE - VBIT SB. <br> 
+										</b> 
+									</i>
+								</p>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					<div class="bb-item" id="item5">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>An Epitome of our Events <img src="http://1.bp.blogspot.com/-_GPlbpQkXWA/Vqce48oC2bI/AAAAAAAABe0/0trFFt8rCuE/s1600/FinalLogo1.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>  
+								
+								
+								<p><span style="font-size:1em; font-weight:bold;">STAR KID</span></p>
+									<center>
+								<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/38167267_2121328668110413_4648731618888908800_o.jpg?_nc_cat=102&_nc_ht=scontent.fhyd8-1.fna&oh=f027bafb5d9eb7f12c08767467d51a33&oe=5D17D935" alt="STAR Program"
+								style="width:30%; float:right; padding:10px;"></center>
+								<br><p>
+								As the name suggests came up the event called Star Kid from WIE. Here’s where it took a step to educate government school children about computer basics. Marking a great success, it could get 41 participants. The team went to nearby government school and provided them with the basic knowledge of computers.
+								It could create great enthusiasm in them and thus a star event happened named “star kid”
+								<br>Date: 27th July, 2018.<br>
+								Venue: Nemergomala - Zilla Parishad High School<br>
+								Organizers: WIE AG, IEEE – VBIT SB<br>
+								</p> 
+								<br> 
+
+								<p><span style="font-size:1em; font-weight:bold;">LITERAGON</span></p>
+									<center>
+								<img src="images/literagon.JPG" alt="Literagon"
+								style="width:30%; float:right; padding:10px;"></center>
+								<br><p>
+								Confining to art and literature, WIE AG under IEEE - VBIT SB took an initiative to conduct ‘Literagon’ on 8th October, 2018, as a part of IEEE week celebrations. In this busy and emerging world where students are compelled to think logically rather creatively, it is obligatory to recognize and appreciate the importance of art and literature by providing a substantial platform to enhance and rejuvenate their creativity with the essence of literature by engaging, inspiring and creating new opportunities.
+								Date: 8th October, 2018.<br>
+								Timings: 10:00 AM - 01:00 PM.<br>
+								Organizers: Women In Engineering, IEEE – VBIT SB<br>
+								</p> 
+								<br> 
+
+								<p><span style="font-size:1em; font-weight:bold;">Industrial Visit to CPRI</span></p>
+									<center>
+								<img src="images/PES ind visit.JPG" alt="Literagon"
+								style="width:30%; float:right; padding:10px;"></center>
+								<br><p>
+										The Industrial Visit to Central Power Research Institute (CPRI) was conducted exclusively
+										for the fourth year students from the Electrical and Electronics Engineering department by
+										Power and Energy Society under IEEE - VBIT SB. Since it is highly recommended for the
+										students of Electrical and Electronics Engineering department to have an updated knowledge
+										to practically implement theoretical subjects being taught in college, this visit helped in
+										stimulating the heuristic approach of students towards learning.
+										
+								Date: 24th August, 2018.<br>
+								Timings: 10:00 AM - 01:00 PM.<br>
+								Organizers: Power and Energy Society, IEEE – VBIT SB<br>
+								</p> 
+								<br> 
+
+								<p><span style="font-size:1em; font-weight:bold;">Appathon</span></p>
+									<center>
+								<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/44830479_1915636911845358_1339272748236537856_o.jpg?_nc_cat=107&_nc_ht=scontent.fhyd8-1.fna&oh=f4886ad6d412168331eb95f4c96dca60&oe=5D247A47" alt="Literagon"
+								style="width:30%; float:right; padding:10px;"></center>
+								<br><p>
+										The Computer Society Chapter of IEEE - VBIT SB has been triumphant in organizing ‘Appathon’, 
+										a 2-day Mobile Application Development Workshop & Competition for the 2nd, 
+										3rd & 4th year students of VBIT on 4 th and 5th October, 2018 .
+										 To escalate the celebrations of the IEEE Week, the Computer Society
+										  took the initiative of providing a platform which bestowed the students 
+										  with the art of Mobile Application Development, thus, ensuing interest 
+										  among them in building simple Mobile Applications and disclosing the need 
+										  for skilled Developers in the current industry.    
+										
+								Date: 4th and 5th October<br>
+								Timings: 10:00 AM - 01:00 PM.<br>
+								Organizers: Computer Society, IEEE – VBIT SB<br>
+								</p> 
+								<br> 
+
+								<p><span style="font-size:1em; font-weight:bold;">Inceptra</span></p>
+								<center>
+								<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/44865351_2189113491120850_1628627323488043008_o.jpg?_nc_cat=109&_nc_ht=scontent.fhyd8-1.fna&oh=5c99739000c6d9d23d8fd80623ead292&oe=5D1BEADF" alt="3D Gaming Workshop"
+								style="width:20%; float:right; padding:10px;"></center>
+								
+								<p>			As a part of IEEE week celebrations, IEEE-VBIT SB has organized “INCEPTRA”- a technical project competition in which II & III B.Tech students from various branches of engineering were  participated.
+					
+
+								<br>Event date:20th and 21st September, 2017<br>
+								Venue: Vignana Bharathi Institute of Technology <br>
+								Organizers: IEEE – VBIT SB 
+								</p><br>
+								
+
+
+								
+									<p>	<span style="font-size:1em; font-weight:bold;">Avishkar</span> </p>
+											<center>
+											<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/51158933_385604211995286_7200082775582441472_n.jpg?_nc_cat=110&_nc_ht=scontent.fhyd8-1.fna&oh=26e6af5c888b3297d249d525a0ae622a&oe=5D0A04F8" alt="3D Gaming Workshop"
+																		style="width:20%; float:right; padding:10px;"> 
+											</center>								
+									<p> 
+											<br> 
+											<p>  
+												IEEE-VBIT SB has conducted AVISHKAR-2K19, (Intra-Collegiate round) in which 151 teams participated. The final round was held on 26-01-2017 for the 15 teams short listed from the prelims.
+												<br>Event date:25th and 26th January,2019<br>
+												Venue: Vignana Bharathi Institute of Technology <br>
+												Organizers: IEEE – VBIT SB 
+										</p> 
+									<br>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+										
+					<div class="bb-item" id="item6">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>Inceptra<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div> 
+
+								<center>
+										<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/44865351_2189113491120850_1628627323488043008_o.jpg?_nc_cat=109&_nc_ht=scontent.fhyd8-1.fna&oh=5c99739000c6d9d23d8fd80623ead292&oe=5D1BEADF" alt="Talk"
+										style="width:50%; float:left; padding:10px;"></center>
+										<p> Going by the motto of IEEE, ‘advancing technology for humanity’ we, the team of IEEE - VBIT SB
+												brainstormed about what different we could do for the students of VBIT. And this thought was the
+												inception for “INCEPTRA”.<br>
+												As the tenure of 2018-19 began, the entire Executive Board had meetings to discuss about the event
+												and devised a blueprint for the event and have decided to provide a platform to students of VBIT by
+												serving as means in training our students in such a way that they can work in any kind of
+												environments and giving the participants the way to find the resources from scratch.
+												From this, INCEPTRA emerged as the Project Development Competition held exclusively for Second
+												and Third years of VBIT.<br> 
+												<img src="https://scontent.fhyd8-1.fna.fbcdn.net/v/t1.0-9/44979321_2189109607787905_1378763026903072768_o.jpg?_nc_cat=101&_nc_ht=scontent.fhyd8-1.fna&oh=34563917a18c05632af88aa2fd8d9ee4&oe=5D0BC38D" alt="STAR Program"
+										style="width:50%; float:right; padding:10px;"></center>
+												We divided the teams based on their fields of interest. While making the teams, we were pretty
+												much sure that students would give their best and come up with good ideas. The participants were
+												given utmost support from the faculty and also the 4th years who guided them in gathering all the
+												resources required by them for their project and to create a prototype of their project which would
+												as a result pump up their confidence of facing the outside world and also bag some precious
+												knowledge which would be of great help in their future.<br> 
+									
+												As expected, they came up with a good set of projects, improving their skill set. The students were
+												successful in creating the prototypes of their ideas and gained enormous knowledge about the
+												different aspects of their projects making them aware of their applications and paving a way to
+												enhance and develop their projects in a unique way.<br>
+												Planning the guidelines, protocols and rules from scratch was a risky task, the work and the
+												organizing done by the volunteers and the Organizing Committee managed to make the event a
+												grand success. </p><br><br><br><br>
+										
+										
+										
+								
+							</div>
+							
+							</div>
+						</div>
+				
+					
+					
+					
+						<div class="bb-item" id="item7">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>  Layers of my Canvas.. <img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>
+								<center>
+										<img src="images/bhavani.jpg" alt="Talk"
+										style="width:50%; float:left; padding:10px;"></center>
+							<p>	Opportunities don’t happen. You’ll have to create them.
+It has been truly said that designing is a journey of discovering oneself. Or rather, one’s
+self.<br>
+I believe that every design begins with a story and the story of every designer, innately
+being unique.<br>
+It is a plethora of shades constricting within the Red, Green and Blue color model. A
+journey with an equal tinge of texture, contrast, and saturation.<br>
+I am D. Bhavani Sai and I’ve always had an extreme love for creativity, right from a very
+tender age. From drawing to playing with Lego, making clay models to doing creative
+activities, these were always a matter of great fun to me and delving deep into the world
+of creating something new, I consider it a great deal of satisfaction.<br>
+My journey of transformation from a basic designer to the design lead of IEEE YESIST
+12 event is a treasure trove of experiences filled with many sleepless nights, finite
+rejections and infinite patience.<br>
+My story of designing started in my sophomore year of my under graduation I wanted to
+be a part of the flagship event of IEEE - VBIT SB under the graphic designing portfolio
+and hence started learning to work on different designing platforms and I finally made it
+to AVISHKAR 2K17.<br>
+Despite early indicators that I wasn’t enjoying things, I ploughed on through. I wanted to
+give it a proper shot, especially after the enormous amount of time and work I had
+invested just to be a part of the team in the first place. Besides, I had never quit
+anything in my life, I always saw things through. There were situations throughout this
+journey which have played an important role in my artistic transformation. And the most
+important one, Rejection! It is well versed that rejection puts you out of your comfort
+zone which is usually when you are at your best and that mistakes are a stepping stone
+to success. Those were my heydays when I was a part of the Graphic Designing
+portfolio of the Organizing team of Avishkar 2K17. It was a situation where I had to
+design 72 cover pictures and all of them were rejected. It was that one moment where I
+felt I do not fit for this job and Graphic Designing is not my cup of tea.
+I WANTED TO QUIT.<br>
+And that is when my team came into the play. It is rightly quoted that – “Talent wins
+games but teamwork wins championships.” After tons of motivation from my team, I
+could brood the fact that the very petty yet the essential designing skills were in scarce.
+And that’s when I started to see graphic designing in a whole new perspective which
+brought me much closer to where I stand today.<br>
+
+Gaining the professional experience in designing through that event, I put my leg forth
+to work for sectional level events of IEEE where I increased my network and thus I
+received various opportunities to work for national level IEEE events.
+This journey of mine has made me both scholarly and culturally entrenched, ambitious
+but not pretentious, self-deprecating yet confident, forthright but unassuming,
+delightfully irreverent yet appropriately respectful - a complex and whole human being. 
+And I can say with absolute certainty that as a result of everything I mentioned above I
+have been able to reinvent myself into a more confident individual.
+Designing made me realize that it is simple making it even more complicated.
+All I can say is, don’t ever give up. Persistence and determination always
+pays off
+<br><br>
+<b>Graphic Designer for AVISHKAR 2K17 – flagship event of IEEE – VBIT SB</b><br>
+<b>Graphic Designer for IEEE – VBIT SB(2017-18)</b><br>
+<b>Graphic Designer for All Hyderabad Computer Society Student Congress</b><br>
+<b>Graphic Designer for IEEE young professionals Hyderabad<br></b>
+<b>Graphic Designer for Kaizen 5.0 <br></b>
+<b>Design Mentor for AVISHKAR 2K18 - flagship event of IEEE – VBIT SB<br></b>
+<b>UI/UX Design Intern Network 360 Media<br></b>
+<b>Design lead IEEE – VBIT SB (2018-19)<br></b>
+<b>Design lead for Section Student Congress’18 conducted by IEEE Hyderabad
+		Section<br></b>
+<b>Graphic Designer for AICSSYC’18</b><br>
+<b>Design Volunteer for Sponsorship Initiative Lead| Computer Society Indian Council
+SAC</b><br>
+<b>Design Lead for IEEE YESIST 12</b><br>
+<b>Chief Creative Director Wissenarie</b><br></p>
+	
+							</div>
+						</div>
+				
+					</div>
+					
+					
+					<div class="bb-item" id="item8">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>Journey of 'The Harsens'<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>   
+								<p>
+									On the 8 th and 9 th September, 2018, three students from VBIT, Rashmitha Varma, Pujith C S
+									and; Akshata Ravinder represented IEEE - VBIT SB at the Saturday Sunday 12-hours [SS12]
+									event held in Sri Lanka. The newsletter team took their interview on what their experience
+									was.<br>
+									<b>What exactly is SS12 and how did you guys get an opportunity to be a part of
+									it?</b><br>
+									SS12 is an IEEE Project Competition that is conducted on an international level
+									for the IEEE members of the R10 region. Students who have IEEE membership
+									receive mails regarding the various competitions and conferences being held
+									by IEEE. We received information regarding the competition through one such
+									mail.<br>
+
+									<b>How was your experience being able to witness something outside India?</b><br>
+
+									We got to experience and understand the culture and traditions of the place
+									and interact with the participants from all over the world, we tried local
+									delicacies and had the chance to watch the traditional dance at one of the
+									cultural events. It was a beautiful place, and the people were extremely kind.
+									So all in all, it was a wonderful experience!<br>
+								<b>What was the most memorable moment(s) of your journey?</b><br>
+									There are countless memories we made in Sri Lanka. But my most favourite memory will
+									always be the night when we had our dinner near the beach. We could hear the voice of the
+									ocean and the ambience was beautiful and tranquil. There was a hotel singer, we called him
+									and requested to sing a song. He sang some Sri Lankan song. We all started giggling and
+									smiling looking at each other gesturing that we didn&#39;t understand a single word. Then we
+									went to our Hostel which was just half a kilometre from the beach. We went on the rooftop
+									and saw the beach view. It was legendary! Few of the foreigners joined us in the pool and
+									we made new friends. We didn&#39;t sleep that night, we made new friends and new memories.<br>
+
+								<b>Could you describe briefly any particular idea or tech which caught your eye?</b><br>
+									One tech which completely blew our mind was the app TechVidya made by a team
+									from Mumbai. Their idea was to integrate Augmented Reality (AR) into learning for
+									children. Cards with chips embedded in them can be scanned with their app using a
+									mobile phone, upon which an AR Object on the table is visible on the screen in real-
+
+									time. Each card shows a different animal and their movements. This also happened
+									to be the winning Project of the SS12 competition.<br>
+
+								<b>What would your word of inspiration be for all the juniors who are looking
+									up to IEEE?</b><br>
+									The outlook on IEEE in our college from students to management is stupendous. Since its
+									inception in 2006 our alumni worked very hard to earn the reputation of IEEE-VBIT SB. With
+									their persevering efforts and selfless dedication our student branch emerged with
+									remarkable success with more than 12 IEEE appreciation and scholarship awards. My advice
+									to juniors of our college is to look IEEE as a source of opportunities to learn, network and
+									collaborate. It gives you an exposure to network with different people around our country.
+									When I say networking that doesn&#39;t mean just taking contact numbers and saving. It&#39;s about
+									building professional relationships and collaborate to do something innovative. IEEE-VBIT SB
+									office bearers are always ready to help and encourage students to do innovations. Our
+									number of volunteers maybe less, but our vision is large.<br>
+																	
+								</p>								
+							</div>
+						</div>
+					</div>
+					
+					
+						<div class="bb-item" id="item9">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>Competitve Programming <img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>
+								
+								<p> 
+										Competitive Programming is the sport of solving computational
+										problems using Data Structures, Algorithms of Computer Science and also
+										the implementation of various mathematical strategies in order to construct
+										a computer program which gives desired output for wide range of inputs. 
+										Every Problem in a Programming Competition consists of three parts which are
+					
+								</p> 
+								<p>
+										1.Problem Statement <br>  
+										2.Constraints <br>
+										3.Example <br>
+								</p>   
+								<p>  
+										<b>Problem Statements:</b>
+										Extensively describes the problem scenario for which
+										a computer program has to be created.<br> 
+										<i>Constraints: </i>Constraints specify the input range and the output range of the
+										values given to the program <br>
+										<i>Example:</i> Describes an example input and the output obtained from that
+										particular input.<br>
+										A typical Competitive Programming problem looks somewhat like
+										this  - <br>
+										<i>Problem Statement:</i> Given a number find the reverse of its binary
+										representation and print the sum of the number and the decimal number
+										formed by reversing its binary representation  <br>
+										Input Constraints :  1 to 1000 <br>
+										Input : 3 <br>
+										Output: 15<br>
+								</p> 
+								<br>
+								<p>      
+										<b>Why should a CS Student practice Competitive Programming?</b> <br>
+										Strangely, Competitive Programming is the best way to improve Data
+										Structures and Algorithm skills, for any Computer Science individual
+										irrespective of whether he’s in his Bachelor's or Master's or working
+										professional or even a research scholar.
+								</p> 
+								<br>
+								<p>  
+										<b>What is the use of improving DS and Algorithm skills, you ask?</b><br>
+										Well, consider any top-notch software application that you are
+										acquainted with, for instance Google, Facebook, Instagram etc. 
+										They work seamlessly because of the extensive use of Data Structures and
+										Algorithms in the Backend of the application.<br> 
+										<br>
+										<i>“A Computer Science Engineer is not a Computer Science
+										Engineer unless and until he is well versed with DS and Algo”</i>
+										<br>
+										Having a strong hold on DS and Algo gives you the luxury to try out new
+										ways of implementing the regular stuff in your applications. The reason
+										why Google Search is so efficient is due to the DS and Algo implementation
+										they use (Page Rank Algorithm). Any Major software company before
+										employing/recruiting any Software engineer first tests his/her knowledge
+										on  DS and Algo. 
+										<br>
+								</p> 
+					
+								<p>  
+										How should I start about with Competitive Programming?
+										The best time to start competitive programming is in your 2nd
+										semester. It doesn’t matter even if it’s too late. If you’re ready to practice
+										hard then by the end of engineering you can surely be an expert at it. 
+										Widely popular websites to practice competitive programming are:
+										SPOJ spoj.com is a problem archive, consisting of a wide variety of
+										problems from beginner to an expert level. SPOJ is the first place any
+										programmer would begin his carrier with.<br>
+										<a href="https://www.codechef.com" target="_blank"><u>CodeChef</u></a>  is the only popular Indian Competitive
+										programming site maintained by Direct-i which conducts monthly
+										competitions<br>
+										<a href="https://www.codeforces.com" target="_blank"><u>CodeForces</u></a>  is globally famous competitive
+										programming site which conducts regular weekly competitions.<br>
+										<a href="https://www.hackerrank.com" target="_blank"><u>HackerRank</u></a>  has topic wise problems which also
+										evaluates your global rank with every problem you solve.  
+										<br> 
+										<br>  
+										<i> 
+											<b>  
+													- Kunal Dubey<br> 
+													III IT   
+											</b>
+										</i>
+								</p>  
+
+
+	
+							</div>
+						</div>
+				
+					</div>
+	
+					
+						<div class="bb-item" id="item10">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2>Upsilon Pi Epsilon<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div> 
+								<p> 
+										<center>
+												<img src="https://instagram.fhyd8-1.fna.fbcdn.net/vp/db89bb5a40436f44569ddba0f537ce44/5D114FDD/t51.2885-15/sh0.08/e35/s640x640/52587363_781999622166729_4740094258170717744_n.jpg?_nc_ht=instagram.fhyd8-1.fna.fbcdn.net" alt="Talk"
+												style="width:50%; float:left; padding:10px;"></center> 
+
+								It was 21:45 on February 25th, 2019, when I received a mail from IEEE proclaiming my achievement of
+								winning Upsilon Pi Epsilon Honor Society Scholarship, a prestige bestowed only to 4 IEEE CS members
+								all over the world.
+								The primary judging categories of this award is the applicant’s academic performance and the applicant’s
+								volunteering activities in the computing discipline of IEEE.
+								I was drawn towards IEEE because of its worldwide network and its constant research towards trending
+								technology.
+								IEEE exactly replicated my expectations of pursuing an engineering degree which enticed me to learn as
+								much as possible.<br><br>
+								From working as a Web Designer for 'Avishkar 2K17', the flagship event of IEEE - VBIT SB, to becoming
+								the Secretary of the Computer Society Chapter of IEEE - VBIT SB, and to finally become the
+								Chairperson of IEEE - VBIT SB for the tenure 2018-19, these enriching experiences indeed gave me the
+								opportunity to network with so many industry officials in the various conferences that I have attended.
+								I stepped into a completely different world where conversations were purely technical. This motivated me
+								to focus more on the topics being taught in college, increasing my interest towards them which proved to
+								be crucial in maintaining my academics.
+								In my final year, regardless of the uncertainty of receiving the UPE Scholarship, I was confident enough
+								to apply for it. My colleagues stood by me as the pillars of support throughout the entire process and also
+								guided me on how to improve the chances of achieving my dream.<br><br>
+								All in all, if it was not for IEEE - VBIT SB, I would have still been the silent obedient girl. But now, I can
+								affirm that if you leave me in a room with strangers, I can confidently converse with each and every one
+								of them. These newly gained qualities have ultimately resulted in the recognition that I have received
+								through UPE.
+								</p>
+							</div>
+						</div>
+				
+					</div>
+					
+	
+										
+					<div class="bb-item" id="item11">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+								<h2> Smartphone 101 <img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px;"></h2>
+								</div>
+								<p> 
+										In this era of rapidly developing technology, a smartphone is more than a comfort. It is a
+										necessity for everyone these days, and thus choosing the perfect phone for you might seem
+										like a tiresome task with so many companies coming up with a latest model every week. So
+										let us look at the basic things you need to look for, while buying a smartphone. <br> 
+				
+												<b>There are 5 parameters based on which we can judge a smartphone: </b> <br> 
+													1. Performance<br> 
+													2. Battery<br> 
+													3. Camera  <br>   
+													4. Display<br> 
+													5. Build<br> 
+								
+						
+						
+									</p>   
+									<p>  
+											<b>Performance:</b>
+											When we talk about smartphone performance, the first and the foremost thing to look out for
+											is the processor.
+											Qualcomm’s Snapdragon release quality processors in many variants. We have 400 series for
+											low-budget phones, 600 series for mid-range and 800 series for flagship models.
+											Currently, Snapdragon 845 is the latest and the fastest chip that they offer.
+											Contrary to the popular belief, more RAM does not always imply a faster speed. A simple
+											example would be the comparison of RAM between Xiaomi Redmi Note 6 Pro which offers
+											6GB RAM which is smoothly outperformed by Google Pixel 3 XL with just 4GB RAM.
+											Thus, we must also take the amount of optimization offered by the device into consideration.
+											Choosing a phone which has the pure stock Android experience like the Pixel series or
+											near-stock experience like the OxygenOS by OnePlus without any custom UI or bloatware
+											is highly recommended if high performance is your criteria. My pick for the best performing
+											Smartphone would be the <b>OnePlus 6T</b>. With 8GB RAM and Snapdragon 845, it’s a beast of
+											a phone in terms of performance.
+									</p> 
+						
+									<p>  
+											<b>Battery:</b>
+											Smartphones nowadays consist of a Li-ion or a Li-Po battery whose measuring parameter is
+											mAh which is milli Ampere hour. A standard 3000mAh battery may last for 4-5 hours on a
+											continuous heavy usage. Although, higher number indicates a better battery life, it is not the
+											only judging criteria. OS optimization also plays a major role. This includes how
+											intelligently a phone is handling multi-tasking, background processes and memory. The
+											phone with the best battery life according to me would be the <b>Huawei Mate 20 Pro</b>. It
+											comes with a whooping 4200mAh battery which can last you upto 8 hours of continuous
+											usage very easily.
+									</p> 
+						
+									<p>  
+											<b>Camera:</b>
+											Smartphones nowadays are coming with a dual camera and even a triple camera which may
+											make you wonder if they’re going for an overkill. The Smartphone camera is judged based
+											on various factors apart from the number of MegaPixels of the camera. The second camera
+						
+											can offer a Telephoto lens which is designed to get you as close to a distant subject as
+											possible. With their higher focal length, telephoto lenses let you zoom in generally between
+											2-2.3x of the frame without compromising on the image quality. The image processor used
+											also helps in enhancing the image quality to a great extent. Google Pixel 3 XL, which is my
+											pick for the best smartphone camera, offers a stupendous image quality with just a single
+											camera.
+									</p> 
+						
+									<p>  
+											<b>Display:</b>
+												The display of a smartphone has come a long way from an LCD Panels to the latest
+												AMOLED and OLED displays. PPI which stands for Pixels Per Inch is a parameter which
+												helps in determining the quality of the display. Higher the pixel density, crispier is the
+												display quality. Samsung has been a top producer of smartphone displays with even the latest
+												iPhones using them. My pick for the best smartphone display would go to the<b>Samsung
+														Galaxy Note 9</b>whose Infinity Display never fails to charm me.
+									</p> 
+						
+									<p>  
+											<b>Build:</b>
+											Coming to the last parameter, we have the build quality of the phone. A lot of phones lately
+											have been using metal and/or glass for making their phone. Having a glass back enables
+											wireless charging whereas a metal back helps in improving the sustainability of the
+											smartphone. Apart from the quality, the design and the aesthetic factor must also be
+											considered. My choice would be the <b>Oppo Find X</b> which gave a unique solution to the notch
+											problem and at the same time maintaining the build.
+									</p>  
+						
+									<p>  
+											<b>Conclusion:</b>
+											When it comes to choosing an ideal smartphone, it all comes down to your usage patterns
+											and which parameters you prioritize. I hope this article helps you in finding that one unique
+											phone designed for you. 
+										
+
+									</p> 
+									<hr> 
+								<p>
+									<i> 
+										<b> 
+											Kaustubh Eppalapalli<br>
+											III CSE <br> 
+										</b> 
+									</i>
+								</p>
+
+							</div>
+						</div>
+						
+					</div>
+					
+			
+						<div class="bb-item" id="item12">
+						<div class="content">
+							<div class="scroller">
+								<div class="tophea">
+										<h2>Membership Details<img src="https://www.ieeevbitsb.in/wp-content/uploads/2018/10/nw2.png" alt="sblogo" width="100" style="float:right; padding-left:10px; margin-bottom: 20px;"></h2>
+									</div>  
+									
+									<p> <b>Benefits of Taking IEEE Membership</b><br>
+										Often, it so happens that students do not get proper exposure to the fascinating world of engineering, due to lack of necessary resources to research and develop their own projects.
+
+											Curiousity is an asset for students, a motivating factor to help them learn better. Having said so, it is also important that students are provided with resources that can help them in this process. 
+											
+											IEEE is one of the best organisation for students, as it is a great source for students to access various papers, receive technical magazines, attend webinars, network and interact with students all over the world.
+											An IEEE membership allows students free access to all this, with an added advantage of opportunities to publish papers and a chance to attend various conferences. IEEE members include various eminent professors and individuals who are proficient in various fields, thus making it possible for students to comment and interact with them.
+											
+											Apart from this, IEEE members get to apply for various student scholarships to help them pursue further studies.
+											
+											Taking an IEEE membership, is the best investment a student can make 
+										</p>
+									<p>” Dedicated to advancing technology and your career” being its prime motto, membership is presented with resources, opportunities and discounts to help advance your professional and personal goals while supporting the IEEE mission. A world-wide Community of Technology and Engineering Professionals, United by a common desire to Continuously learn, Interact, Collaborate and Innovate.
+									Being an IEEE’ian, you can expand your network with colleagues and join IEEE societies or Affinity groups focused to your area of interest.</p>
+									
+									<p>Membership includes Building your Profession and Open Career Doors, stay current and get ahead with IEEE Resources, Access to information on the latest technology and trends, industry innovations and events. So come join IEEE and 
+									shape the worlds Technology future.</p>
+									
+									<p><b>Membership Amount:</b> -
+									Full Year Membership Amount : 27$<br>
+									Power and Energy Society : 18$<br>
+									Computer Society : 8$<br>
+									Communications Society : 17$<br>
+									Women In Engineering : Free </p>
+	
+									<p>
+	
+									<b>Contact:</b><br>
+									Shrijith : +918143685756
+									</p>
+							</div>
+						</div>
+				
+					</div>		
+				
+				<nav>
+					<span id="bb-nav-prev">&larr;</span>
+					<span id="bb-nav-next">&rarr;</span>
+				</nav>
+
+				<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+			</div>
+				
+		</div><!-- /container -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>
+		/*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
+ * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
+ * Thanks to: Seamus Leahy for adding deltaX and deltaY
+ *
+ * Version: 3.0.6
+ * 
+ * Requires: 1.2.2+
+ */
+
+(function($) {
+
+var types = ['DOMMouseScroll', 'mousewheel'];
+
+if ($.event.fixHooks) {
+    for ( var i=types.length; i; ) {
+        $.event.fixHooks[ types[--i] ] = $.event.mouseHooks;
+    }
+}
+
+$.event.special.mousewheel = {
+    setup: function() {
+        if ( this.addEventListener ) {
+            for ( var i=types.length; i; ) {
+                this.addEventListener( types[--i], handler, false );
+            }
+        } else {
+            this.onmousewheel = handler;
+        }
+    },
+    
+    teardown: function() {
+        if ( this.removeEventListener ) {
+            for ( var i=types.length; i; ) {
+                this.removeEventListener( types[--i], handler, false );
+            }
+        } else {
+            this.onmousewheel = null;
+        }
+    }
+};
+
+$.fn.extend({
+    mousewheel: function(fn) {
+        return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
+    },
+    
+    unmousewheel: function(fn) {
+        return this.unbind("mousewheel", fn);
+    }
+});
+
+
+function handler(event) {
+    var orgEvent = event || window.event, args = [].slice.call( arguments, 1 ), delta = 0, returnValue = true, deltaX = 0, deltaY = 0;
+    event = $.event.fix(orgEvent);
+    event.type = "mousewheel";
+    
+    // Old school scrollwheel delta
+    if ( orgEvent.wheelDelta ) { delta = orgEvent.wheelDelta/120; }
+    if ( orgEvent.detail     ) { delta = -orgEvent.detail/3; }
+    
+    // New school multidimensional scroll (touchpads) deltas
+    deltaY = delta;
+    
+    // Gecko
+    if ( orgEvent.axis !== undefined && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
+        deltaY = 0;
+        deltaX = -1*delta;
+    }
+    
+    // Webkit
+    if ( orgEvent.wheelDeltaY !== undefined ) { deltaY = orgEvent.wheelDeltaY/120; }
+    if ( orgEvent.wheelDeltaX !== undefined ) { deltaX = -1*orgEvent.wheelDeltaX/120; }
+    
+    // Add event and delta to the front of the arguments
+    args.unshift(event, delta, deltaX, deltaY);
+    
+    return ($.event.dispatch || $.event.handle).apply(this, args);
+}
+
+})(jQuery);
+
+		</script>
+		<script>
+		/*
+ * jScrollPane - v2.0.0beta11 - 2011-07-04
+ * http://jscrollpane.kelvinluck.com/
+ *
+ * Copyright (c) 2010 Kelvin Luck
+ * Dual licensed under the MIT and GPL licenses.
+ */
+(function(b,a,c){b.fn.jScrollPane=function(e){function d(D,O){var az,Q=this,Y,ak,v,am,T,Z,y,q,aA,aF,av,i,I,h,j,aa,U,aq,X,t,A,ar,af,an,G,l,au,ay,x,aw,aI,f,L,aj=true,P=true,aH=false,k=false,ap=D.clone(false,false).empty(),ac=b.fn.mwheelIntent?"mwheelIntent.jsp":"mousewheel.jsp";aI=D.css("paddingTop")+" "+D.css("paddingRight")+" "+D.css("paddingBottom")+" "+D.css("paddingLeft");f=(parseInt(D.css("paddingLeft"),10)||0)+(parseInt(D.css("paddingRight"),10)||0);function at(aR){var aM,aO,aN,aK,aJ,aQ,aP=false,aL=false;az=aR;if(Y===c){aJ=D.scrollTop();aQ=D.scrollLeft();D.css({overflow:"hidden",padding:0});ak=D.innerWidth()+f;v=D.innerHeight();D.width(ak);Y=b('<div class="jspPane" />').css("padding",aI).append(D.children());am=b('<div class="jspContainer" />').css({width:ak+"px",height:v+"px"}).append(Y).appendTo(D)}else{D.css("width","");aP=az.stickToBottom&&K();aL=az.stickToRight&&B();aK=D.innerWidth()+f!=ak||D.outerHeight()!=v;if(aK){ak=D.innerWidth()+f;v=D.innerHeight();am.css({width:ak+"px",height:v+"px"})}if(!aK&&L==T&&Y.outerHeight()==Z){D.width(ak);return}L=T;Y.css("width","");D.width(ak);am.find(">.jspVerticalBar,>.jspHorizontalBar").remove().end()}Y.css("overflow","auto");if(aR.contentWidth){T=aR.contentWidth}else{T=Y[0].scrollWidth}Z=Y[0].scrollHeight;Y.css("overflow","");y=T/ak;q=Z/v;aA=q>1;aF=y>1;if(!(aF||aA)){D.removeClass("jspScrollable");Y.css({top:0,width:am.width()-f});n();E();R();w();ai()}else{D.addClass("jspScrollable");aM=az.maintainPosition&&(I||aa);if(aM){aO=aD();aN=aB()}aG();z();F();if(aM){N(aL?(T-ak):aO,false);M(aP?(Z-v):aN,false)}J();ag();ao();if(az.enableKeyboardNavigation){S()}if(az.clickOnTrack){p()}C();if(az.hijackInternalLinks){m()}}if(az.autoReinitialise&&!aw){aw=setInterval(function(){at(az)},az.autoReinitialiseDelay)}else{if(!az.autoReinitialise&&aw){clearInterval(aw)}}aJ&&D.scrollTop(0)&&M(aJ,false);aQ&&D.scrollLeft(0)&&N(aQ,false);D.trigger("jsp-initialised",[aF||aA])}function aG(){if(aA){am.append(b('<div class="jspVerticalBar" />').append(b('<div class="jspCap jspCapTop" />'),b('<div class="jspTrack" />').append(b('<div class="jspDrag" />').append(b('<div class="jspDragTop" />'),b('<div class="jspDragBottom" />'))),b('<div class="jspCap jspCapBottom" />')));U=am.find(">.jspVerticalBar");aq=U.find(">.jspTrack");av=aq.find(">.jspDrag");if(az.showArrows){ar=b('<a class="jspArrow jspArrowUp" />').bind("mousedown.jsp",aE(0,-1)).bind("click.jsp",aC);af=b('<a class="jspArrow jspArrowDown" />').bind("mousedown.jsp",aE(0,1)).bind("click.jsp",aC);if(az.arrowScrollOnHover){ar.bind("mouseover.jsp",aE(0,-1,ar));af.bind("mouseover.jsp",aE(0,1,af))}al(aq,az.verticalArrowPositions,ar,af)}t=v;am.find(">.jspVerticalBar>.jspCap:visible,>.jspVerticalBar>.jspArrow").each(function(){t-=b(this).outerHeight()});av.hover(function(){av.addClass("jspHover")},function(){av.removeClass("jspHover")}).bind("mousedown.jsp",function(aJ){b("html").bind("dragstart.jsp selectstart.jsp",aC);av.addClass("jspActive");var s=aJ.pageY-av.position().top;b("html").bind("mousemove.jsp",function(aK){V(aK.pageY-s,false)}).bind("mouseup.jsp mouseleave.jsp",ax);return false});o()}}function o(){aq.height(t+"px");I=0;X=az.verticalGutter+aq.outerWidth();Y.width(ak-X-f);try{if(U.position().left===0){Y.css("margin-left",X+"px")}}catch(s){}}function z(){if(aF){am.append(b('<div class="jspHorizontalBar" />').append(b('<div class="jspCap jspCapLeft" />'),b('<div class="jspTrack" />').append(b('<div class="jspDrag" />').append(b('<div class="jspDragLeft" />'),b('<div class="jspDragRight" />'))),b('<div class="jspCap jspCapRight" />')));an=am.find(">.jspHorizontalBar");G=an.find(">.jspTrack");h=G.find(">.jspDrag");if(az.showArrows){ay=b('<a class="jspArrow jspArrowLeft" />').bind("mousedown.jsp",aE(-1,0)).bind("click.jsp",aC);x=b('<a class="jspArrow jspArrowRight" />').bind("mousedown.jsp",aE(1,0)).bind("click.jsp",aC);
+if(az.arrowScrollOnHover){ay.bind("mouseover.jsp",aE(-1,0,ay));x.bind("mouseover.jsp",aE(1,0,x))}al(G,az.horizontalArrowPositions,ay,x)}h.hover(function(){h.addClass("jspHover")},function(){h.removeClass("jspHover")}).bind("mousedown.jsp",function(aJ){b("html").bind("dragstart.jsp selectstart.jsp",aC);h.addClass("jspActive");var s=aJ.pageX-h.position().left;b("html").bind("mousemove.jsp",function(aK){W(aK.pageX-s,false)}).bind("mouseup.jsp mouseleave.jsp",ax);return false});l=am.innerWidth();ah()}}function ah(){am.find(">.jspHorizontalBar>.jspCap:visible,>.jspHorizontalBar>.jspArrow").each(function(){l-=b(this).outerWidth()});G.width(l+"px");aa=0}function F(){if(aF&&aA){var aJ=G.outerHeight(),s=aq.outerWidth();t-=aJ;b(an).find(">.jspCap:visible,>.jspArrow").each(function(){l+=b(this).outerWidth()});l-=s;v-=s;ak-=aJ;G.parent().append(b('<div class="jspCorner" />').css("width",aJ+"px"));o();ah()}if(aF){Y.width((am.outerWidth()-f)+"px")}Z=Y.outerHeight();q=Z/v;if(aF){au=Math.ceil(1/y*l);if(au>az.horizontalDragMaxWidth){au=az.horizontalDragMaxWidth}else{if(au<az.horizontalDragMinWidth){au=az.horizontalDragMinWidth}}h.width(au+"px");j=l-au;ae(aa)}if(aA){A=Math.ceil(1/q*t);if(A>az.verticalDragMaxHeight){A=az.verticalDragMaxHeight}else{if(A<az.verticalDragMinHeight){A=az.verticalDragMinHeight}}av.height(A+"px");i=t-A;ad(I)}}function al(aK,aM,aJ,s){var aO="before",aL="after",aN;if(aM=="os"){aM=/Mac/.test(navigator.platform)?"after":"split"}if(aM==aO){aL=aM}else{if(aM==aL){aO=aM;aN=aJ;aJ=s;s=aN}}aK[aO](aJ)[aL](s)}function aE(aJ,s,aK){return function(){H(aJ,s,this,aK);this.blur();return false}}function H(aM,aL,aP,aO){aP=b(aP).addClass("jspActive");var aN,aK,aJ=true,s=function(){if(aM!==0){Q.scrollByX(aM*az.arrowButtonSpeed)}if(aL!==0){Q.scrollByY(aL*az.arrowButtonSpeed)}aK=setTimeout(s,aJ?az.initialDelay:az.arrowRepeatFreq);aJ=false};s();aN=aO?"mouseout.jsp":"mouseup.jsp";aO=aO||b("html");aO.bind(aN,function(){aP.removeClass("jspActive");aK&&clearTimeout(aK);aK=null;aO.unbind(aN)})}function p(){w();if(aA){aq.bind("mousedown.jsp",function(aO){if(aO.originalTarget===c||aO.originalTarget==aO.currentTarget){var aM=b(this),aP=aM.offset(),aN=aO.pageY-aP.top-I,aK,aJ=true,s=function(){var aS=aM.offset(),aT=aO.pageY-aS.top-A/2,aQ=v*az.scrollPagePercent,aR=i*aQ/(Z-v);if(aN<0){if(I-aR>aT){Q.scrollByY(-aQ)}else{V(aT)}}else{if(aN>0){if(I+aR<aT){Q.scrollByY(aQ)}else{V(aT)}}else{aL();return}}aK=setTimeout(s,aJ?az.initialDelay:az.trackClickRepeatFreq);aJ=false},aL=function(){aK&&clearTimeout(aK);aK=null;b(document).unbind("mouseup.jsp",aL)};s();b(document).bind("mouseup.jsp",aL);return false}})}if(aF){G.bind("mousedown.jsp",function(aO){if(aO.originalTarget===c||aO.originalTarget==aO.currentTarget){var aM=b(this),aP=aM.offset(),aN=aO.pageX-aP.left-aa,aK,aJ=true,s=function(){var aS=aM.offset(),aT=aO.pageX-aS.left-au/2,aQ=ak*az.scrollPagePercent,aR=j*aQ/(T-ak);if(aN<0){if(aa-aR>aT){Q.scrollByX(-aQ)}else{W(aT)}}else{if(aN>0){if(aa+aR<aT){Q.scrollByX(aQ)}else{W(aT)}}else{aL();return}}aK=setTimeout(s,aJ?az.initialDelay:az.trackClickRepeatFreq);aJ=false},aL=function(){aK&&clearTimeout(aK);aK=null;b(document).unbind("mouseup.jsp",aL)};s();b(document).bind("mouseup.jsp",aL);return false}})}}function w(){if(G){G.unbind("mousedown.jsp")}if(aq){aq.unbind("mousedown.jsp")}}function ax(){b("html").unbind("dragstart.jsp selectstart.jsp mousemove.jsp mouseup.jsp mouseleave.jsp");if(av){av.removeClass("jspActive")}if(h){h.removeClass("jspActive")}}function V(s,aJ){if(!aA){return}if(s<0){s=0}else{if(s>i){s=i}}if(aJ===c){aJ=az.animateScroll}if(aJ){Q.animate(av,"top",s,ad)}else{av.css("top",s);ad(s)}}function ad(aJ){if(aJ===c){aJ=av.position().top}am.scrollTop(0);I=aJ;var aM=I===0,aK=I==i,aL=aJ/i,s=-aL*(Z-v);if(aj!=aM||aH!=aK){aj=aM;aH=aK;D.trigger("jsp-arrow-change",[aj,aH,P,k])}u(aM,aK);Y.css("top",s);D.trigger("jsp-scroll-y",[-s,aM,aK]).trigger("scroll")}function W(aJ,s){if(!aF){return}if(aJ<0){aJ=0}else{if(aJ>j){aJ=j}}if(s===c){s=az.animateScroll}if(s){Q.animate(h,"left",aJ,ae)
+}else{h.css("left",aJ);ae(aJ)}}function ae(aJ){if(aJ===c){aJ=h.position().left}am.scrollTop(0);aa=aJ;var aM=aa===0,aL=aa==j,aK=aJ/j,s=-aK*(T-ak);if(P!=aM||k!=aL){P=aM;k=aL;D.trigger("jsp-arrow-change",[aj,aH,P,k])}r(aM,aL);Y.css("left",s);D.trigger("jsp-scroll-x",[-s,aM,aL]).trigger("scroll")}function u(aJ,s){if(az.showArrows){ar[aJ?"addClass":"removeClass"]("jspDisabled");af[s?"addClass":"removeClass"]("jspDisabled")}}function r(aJ,s){if(az.showArrows){ay[aJ?"addClass":"removeClass"]("jspDisabled");x[s?"addClass":"removeClass"]("jspDisabled")}}function M(s,aJ){var aK=s/(Z-v);V(aK*i,aJ)}function N(aJ,s){var aK=aJ/(T-ak);W(aK*j,s)}function ab(aW,aR,aK){var aO,aL,aM,s=0,aV=0,aJ,aQ,aP,aT,aS,aU;try{aO=b(aW)}catch(aN){return}aL=aO.outerHeight();aM=aO.outerWidth();am.scrollTop(0);am.scrollLeft(0);while(!aO.is(".jspPane")){s+=aO.position().top;aV+=aO.position().left;aO=aO.offsetParent();if(/^body|html$/i.test(aO[0].nodeName)){return}}aJ=aB();aP=aJ+v;if(s<aJ||aR){aS=s-az.verticalGutter}else{if(s+aL>aP){aS=s-v+aL+az.verticalGutter}}if(aS){M(aS,aK)}aQ=aD();aT=aQ+ak;if(aV<aQ||aR){aU=aV-az.horizontalGutter}else{if(aV+aM>aT){aU=aV-ak+aM+az.horizontalGutter}}if(aU){N(aU,aK)}}function aD(){return -Y.position().left}function aB(){return -Y.position().top}function K(){var s=Z-v;return(s>20)&&(s-aB()<10)}function B(){var s=T-ak;return(s>20)&&(s-aD()<10)}function ag(){am.unbind(ac).bind(ac,function(aM,aN,aL,aJ){var aK=aa,s=I;Q.scrollBy(aL*az.mouseWheelSpeed,-aJ*az.mouseWheelSpeed,false);return aK==aa&&s==I})}function n(){am.unbind(ac)}function aC(){return false}function J(){Y.find(":input,a").unbind("focus.jsp").bind("focus.jsp",function(s){ab(s.target,false)})}function E(){Y.find(":input,a").unbind("focus.jsp")}function S(){var s,aJ,aL=[];aF&&aL.push(an[0]);aA&&aL.push(U[0]);Y.focus(function(){D.focus()});D.attr("tabindex",0).unbind("keydown.jsp keypress.jsp").bind("keydown.jsp",function(aO){if(aO.target!==this&&!(aL.length&&b(aO.target).closest(aL).length)){return}var aN=aa,aM=I;switch(aO.keyCode){case 40:case 38:case 34:case 32:case 33:case 39:case 37:s=aO.keyCode;aK();break;case 35:M(Z-v);s=null;break;case 36:M(0);s=null;break}aJ=aO.keyCode==s&&aN!=aa||aM!=I;return !aJ}).bind("keypress.jsp",function(aM){if(aM.keyCode==s){aK()}return !aJ});if(az.hideFocus){D.css("outline","none");if("hideFocus" in am[0]){D.attr("hideFocus",true)}}else{D.css("outline","");if("hideFocus" in am[0]){D.attr("hideFocus",false)}}function aK(){var aN=aa,aM=I;switch(s){case 40:Q.scrollByY(az.keyboardSpeed,false);break;case 38:Q.scrollByY(-az.keyboardSpeed,false);break;case 34:case 32:Q.scrollByY(v*az.scrollPagePercent,false);break;case 33:Q.scrollByY(-v*az.scrollPagePercent,false);break;case 39:Q.scrollByX(az.keyboardSpeed,false);break;case 37:Q.scrollByX(-az.keyboardSpeed,false);break}aJ=aN!=aa||aM!=I;return aJ}}function R(){D.attr("tabindex","-1").removeAttr("tabindex").unbind("keydown.jsp keypress.jsp")}function C(){if(location.hash&&location.hash.length>1){var aL,aJ,aK=escape(location.hash);try{aL=b(aK)}catch(s){return}if(aL.length&&Y.find(aK)){if(am.scrollTop()===0){aJ=setInterval(function(){if(am.scrollTop()>0){ab(aK,true);b(document).scrollTop(am.position().top);clearInterval(aJ)}},50)}else{ab(aK,true);b(document).scrollTop(am.position().top)}}}}function ai(){b("a.jspHijack").unbind("click.jsp-hijack").removeClass("jspHijack")}function m(){ai();b("a[href^=#]").addClass("jspHijack").bind("click.jsp-hijack",function(){var s=this.href.split("#"),aJ;if(s.length>1){aJ=s[1];if(aJ.length>0&&Y.find("#"+aJ).length>0){ab("#"+aJ,true);return false}}})}function ao(){var aK,aJ,aM,aL,aN,s=false;am.unbind("touchstart.jsp touchmove.jsp touchend.jsp click.jsp-touchclick").bind("touchstart.jsp",function(aO){var aP=aO.originalEvent.touches[0];aK=aD();aJ=aB();aM=aP.pageX;aL=aP.pageY;aN=false;s=true}).bind("touchmove.jsp",function(aR){if(!s){return}var aQ=aR.originalEvent.touches[0],aP=aa,aO=I;Q.scrollTo(aK+aM-aQ.pageX,aJ+aL-aQ.pageY);aN=aN||Math.abs(aM-aQ.pageX)>5||Math.abs(aL-aQ.pageY)>5;
+return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.jsp-touchclick",function(aO){if(aN){aN=false;return false}})}function g(){var s=aB(),aJ=aD();D.removeClass("jspScrollable").unbind(".jsp");D.replaceWith(ap.append(Y.children()));ap.scrollTop(s);ap.scrollLeft(aJ)}b.extend(Q,{reinitialise:function(aJ){aJ=b.extend({},az,aJ);at(aJ)},scrollToElement:function(aK,aJ,s){ab(aK,aJ,s)},scrollTo:function(aK,s,aJ){N(aK,aJ);M(s,aJ)},scrollToX:function(aJ,s){N(aJ,s)},scrollToY:function(s,aJ){M(s,aJ)},scrollToPercentX:function(aJ,s){N(aJ*(T-ak),s)},scrollToPercentY:function(aJ,s){M(aJ*(Z-v),s)},scrollBy:function(aJ,s,aK){Q.scrollByX(aJ,aK);Q.scrollByY(s,aK)},scrollByX:function(s,aK){var aJ=aD()+Math[s<0?"floor":"ceil"](s),aL=aJ/(T-ak);W(aL*j,aK)},scrollByY:function(s,aK){var aJ=aB()+Math[s<0?"floor":"ceil"](s),aL=aJ/(Z-v);V(aL*i,aK)},positionDragX:function(s,aJ){W(s,aJ)},positionDragY:function(aJ,s){V(aJ,s)},animate:function(aJ,aM,s,aL){var aK={};aK[aM]=s;aJ.animate(aK,{duration:az.animateDuration,easing:az.animateEase,queue:false,step:aL})},getContentPositionX:function(){return aD()},getContentPositionY:function(){return aB()},getContentWidth:function(){return T},getContentHeight:function(){return Z},getPercentScrolledX:function(){return aD()/(T-ak)},getPercentScrolledY:function(){return aB()/(Z-v)},getIsScrollableH:function(){return aF},getIsScrollableV:function(){return aA},getContentPane:function(){return Y},scrollToBottom:function(s){V(i,s)},hijackInternalLinks:function(){m()},destroy:function(){g()}});at(O)}e=b.extend({},b.fn.jScrollPane.defaults,e);b.each(["mouseWheelSpeed","arrowButtonSpeed","trackClickSpeed","keyboardSpeed"],function(){e[this]=e[this]||e.speed});return this.each(function(){var f=b(this),g=f.data("jsp");if(g){g.reinitialise(e)}else{g=new d(f,e);f.data("jsp",g)}})};b.fn.jScrollPane.defaults={showArrows:false,maintainPosition:true,stickToBottom:false,stickToRight:false,clickOnTrack:true,autoReinitialise:false,autoReinitialiseDelay:500,verticalDragMinHeight:0,verticalDragMaxHeight:99999,horizontalDragMinWidth:0,horizontalDragMaxWidth:99999,contentWidth:c,animateScroll:false,animateDuration:300,animateEase:"linear",hijackInternalLinks:false,verticalGutter:4,horizontalGutter:4,mouseWheelSpeed:0,arrowButtonSpeed:0,arrowRepeatFreq:50,arrowScrollOnHover:false,trackClickSpeed:0,trackClickRepeatFreq:70,verticalArrowPositions:"split",horizontalArrowPositions:"split",enableKeyboardNavigation:true,hideFocus:false,keyboardSpeed:0,initialDelay:300,speed:30,scrollPagePercent:0.8}})(jQuery,this);
+
+		
+		</script>
+		<script>
+		(function() {
+
+	var event = jQuery.event,
+
+		//helper that finds handlers by type and calls back a function, this is basically handle
+		// events - the events object
+		// types - an array of event types to look for
+		// callback(type, handlerFunc, selector) - a callback
+		// selector - an optional selector to filter with, if there, matches by selector
+		//     if null, matches anything, otherwise, matches with no selector
+		findHelper = function( events, types, callback, selector ) {
+			var t, type, typeHandlers, all, h, handle, 
+				namespaces, namespace,
+				match;
+			for ( t = 0; t < types.length; t++ ) {
+				type = types[t];
+				all = type.indexOf(".") < 0;
+				if (!all ) {
+					namespaces = type.split(".");
+					type = namespaces.shift();
+					namespace = new RegExp("(^|\\.)" + namespaces.slice(0).sort().join("\\.(?:.*\\.)?") + "(\\.|$)");
+				}
+				typeHandlers = (events[type] || []).slice(0);
+
+				for ( h = 0; h < typeHandlers.length; h++ ) {
+					handle = typeHandlers[h];
+					
+					match = (all || namespace.test(handle.namespace));
+					
+					if(match){
+						if(selector){
+							if (handle.selector === selector  ) {
+								callback(type, handle.origHandler || handle.handler);
+							}
+						} else if (selector === null){
+							callback(type, handle.origHandler || handle.handler, handle.selector);
+						}
+						else if (!handle.selector ) {
+							callback(type, handle.origHandler || handle.handler);
+							
+						} 
+					}
+					
+					
+				}
+			}
+		};
+
+	/**
+	 * Finds event handlers of a given type on an element.
+	 * @param {HTMLElement} el
+	 * @param {Array} types an array of event names
+	 * @param {String} [selector] optional selector
+	 * @return {Array} an array of event handlers
+	 */
+	event.find = function( el, types, selector ) {
+		var events = ( $._data(el) || {} ).events,
+			handlers = [],
+			t, liver, live;
+
+		if (!events ) {
+			return handlers;
+		}
+		findHelper(events, types, function( type, handler ) {
+			handlers.push(handler);
+		}, selector);
+		return handlers;
+	};
+	/**
+	 * Finds all events.  Group by selector.
+	 * @param {HTMLElement} el the element
+	 * @param {Array} types event types
+	 */
+	event.findBySelector = function( el, types ) {
+		var events = $._data(el).events,
+			selectors = {},
+			//adds a handler for a given selector and event
+			add = function( selector, event, handler ) {
+				var select = selectors[selector] || (selectors[selector] = {}),
+					events = select[event] || (select[event] = []);
+				events.push(handler);
+			};
+
+		if (!events ) {
+			return selectors;
+		}
+		//first check live:
+		/*$.each(events.live || [], function( i, live ) {
+			if ( $.inArray(live.origType, types) !== -1 ) {
+				add(live.selector, live.origType, live.origHandler || live.handler);
+			}
+		});*/
+		//then check straight binds
+		findHelper(events, types, function( type, handler, selector ) {
+			add(selector || "", type, handler);
+		}, null);
+
+		return selectors;
+	};
+	event.supportTouch = "ontouchend" in document;
+	
+	$.fn.respondsTo = function( events ) {
+		if (!this.length ) {
+			return false;
+		} else {
+			//add default ?
+			return event.find(this[0], $.isArray(events) ? events : [events]).length > 0;
+		}
+	};
+	$.fn.triggerHandled = function( event, data ) {
+		event = (typeof event == "string" ? $.Event(event) : event);
+		this.trigger(event, data);
+		return event.handled;
+	};
+	/**
+	 * Only attaches one event handler for all types ...
+	 * @param {Array} types llist of types that will delegate here
+	 * @param {Object} startingEvent the first event to start listening to
+	 * @param {Object} onFirst a function to call 
+	 */
+	event.setupHelper = function( types, startingEvent, onFirst ) {
+		if (!onFirst ) {
+			onFirst = startingEvent;
+			startingEvent = null;
+		}
+		var add = function( handleObj ) {
+
+			var bySelector, selector = handleObj.selector || "";
+			if ( selector ) {
+				bySelector = event.find(this, types, selector);
+				if (!bySelector.length ) {
+					$(this).delegate(selector, startingEvent, onFirst);
+				}
+			}
+			else {
+				//var bySelector = event.find(this, types, selector);
+				if (!event.find(this, types, selector).length ) {
+					event.add(this, startingEvent, onFirst, {
+						selector: selector,
+						delegate: this
+					});
+				}
+
+			}
+
+		},
+			remove = function( handleObj ) {
+				var bySelector, selector = handleObj.selector || "";
+				if ( selector ) {
+					bySelector = event.find(this, types, selector);
+					if (!bySelector.length ) {
+						$(this).undelegate(selector, startingEvent, onFirst);
+					}
+				}
+				else {
+					if (!event.find(this, types, selector).length ) {
+						event.remove(this, startingEvent, onFirst, {
+							selector: selector,
+							delegate: this
+						});
+					}
+				}
+			};
+		$.each(types, function() {
+			event.special[this] = {
+				add: add,
+				remove: remove,
+				setup: function() {},
+				teardown: function() {}
+			};
+		});
+	};
+})(jQuery);
+(function($){
+var isPhantom = /Phantom/.test(navigator.userAgent),
+	supportTouch = !isPhantom && "ontouchend" in document,
+	scrollEvent = "touchmove scroll",
+	// Use touch events or map it to mouse events
+	touchStartEvent = supportTouch ? "touchstart" : "mousedown",
+	touchStopEvent = supportTouch ? "touchend" : "mouseup",
+	touchMoveEvent = supportTouch ? "touchmove" : "mousemove",
+	data = function(event){
+		var d = event.originalEvent.touches ?
+			event.originalEvent.touches[ 0 ] :
+			event;
+		return {
+			time: (new Date).getTime(),
+			coords: [ d.pageX, d.pageY ],
+			origin: $( event.target )
+		};
+	};
+
+/**
+ * @add jQuery.event.swipe
+ */
+var swipe = $.event.swipe = {
+	/**
+	 * @attribute delay
+	 * Delay is the upper limit of time the swipe motion can take in milliseconds.  This defaults to 500.
+	 * 
+	 * A user must perform the swipe motion in this much time.
+	 */
+	delay : 500,
+	/**
+	 * @attribute max
+	 * The maximum distance the pointer must travel in pixels.  The default is 75 pixels.
+	 */
+	max : 75,
+	/**
+	 * @attribute min
+	 * The minimum distance the pointer must travel in pixels.  The default is 30 pixels.
+	 */
+	min : 30
+};
+
+$.event.setupHelper( [
+
+/**
+ * @hide
+ * @attribute swipe
+ */
+"swipe",
+/**
+ * @hide
+ * @attribute swipeleft
+ */
+'swipeleft',
+/**
+ * @hide
+ * @attribute swiperight
+ */
+'swiperight',
+/**
+ * @hide
+ * @attribute swipeup
+ */
+'swipeup',
+/**
+ * @hide
+ * @attribute swipedown
+ */
+'swipedown'], touchStartEvent, function(ev){
+	var
+		// update with data when the event was started
+		start = data(ev),
+		stop,
+		delegate = ev.delegateTarget || ev.currentTarget,
+		selector = ev.handleObj.selector,
+		entered = this;
+	
+	function moveHandler(event){
+		if ( !start ) {
+			return;
+		}
+		// update stop with the data from the current event
+		stop = data(event);
+
+		// prevent scrolling
+		if ( Math.abs( start.coords[0] - stop.coords[0] ) > 10 ) {
+			event.preventDefault();
+		}
+	};
+
+	// Attach to the touch move events
+	$(document.documentElement).bind(touchMoveEvent, moveHandler)
+		.one(touchStopEvent, function(event){
+			$(this).unbind( touchMoveEvent, moveHandler);
+			// if start and stop contain data figure out if we have a swipe event
+			if ( start && stop ) {
+				// calculate the distance between start and stop data
+				var deltaX = Math.abs(start.coords[0] - stop.coords[0]),
+					deltaY = Math.abs(start.coords[1] - stop.coords[1]),
+					distance = Math.sqrt(deltaX*deltaX+deltaY*deltaY);
+
+				// check if the delay and distance are matched
+				if ( stop.time - start.time < swipe.delay && distance >= swipe.min ) {
+					var events = ['swipe'];
+					// check if we moved horizontally
+					if( deltaX >= swipe.min && deltaY < swipe.min) {
+						// based on the x coordinate check if we moved left or right
+						events.push( start.coords[0] > stop.coords[0] ? "swipeleft" : "swiperight" );
+					} else
+					// check if we moved vertically
+					if(deltaY >= swipe.min && deltaX < swipe.min){
+						// based on the y coordinate check if we moved up or down
+						events.push( start.coords[1] < stop.coords[1] ? "swipedown" : "swipeup" );
+					}
+
+					// trigger swipe events on this guy
+					$.each($.event.find(delegate, events, selector), function(){
+						this.call(entered, ev, {start : start, end: stop})
+					})
+				
+				}
+			}
+			// reset start and stop
+			start = stop = undefined;
+		})
+});
+
+})(jQuery)
+		
+		</script>
+		<script>
+		/**
+ * jquery.bookblock.js v1.0.2
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2012, Codrops
+ * http://www.codrops.com
+ */
+;
+(function($, window, undefined) {
+
+	'use strict';
+
+	/*
+	* debouncedresize: special jQuery event that happens once after a window resize
+	*
+	* latest version and complete README available on Github:
+	* https://github.com/louisremi/jquery-smartresize/blob/master/jquery.debouncedresize.js
+	*
+	* Copyright 2011 @louis_remi
+	* Licensed under the MIT license.
+	*/
+	var $event = $.event,
+	$special,
+	resizeTimeout;
+
+	$special = $event.special.debouncedresize = {
+		setup: function() {
+			$( this ).on( "resize", $special.handler );
+		},
+		teardown: function() {
+			$( this ).off( "resize", $special.handler );
+		},
+		handler: function( event, execAsap ) {
+			// Save the context
+			var context = this,
+				args = arguments,
+				dispatch = function() {
+					// set correct event type
+					event.type = "debouncedresize";
+					$event.dispatch.apply( context, args );
+				};
+
+			if ( resizeTimeout ) {
+				clearTimeout( resizeTimeout );
+			}
+
+			execAsap ?
+				dispatch() :
+				resizeTimeout = setTimeout( dispatch, $special.threshold );
+		},
+		threshold: 150
+	};
+
+	// global
+	var $window = $(window),
+		Modernizr = window.Modernizr;
+
+	$.BookBlock = function(options, element) {
+
+		this.$el = $(element);
+		this._init(options);
+
+	};
+
+	// the options
+	$.BookBlock.defaults = {
+		// speed for the flip transition in ms
+		speed : 1000,
+		// easing for the flip transition
+		easing : 'ease-in-out',
+		// if set to true, both the flipping page and the sides will have an overlay to simulate shadows
+		shadows : true,
+		// opacity value for the "shadow" on both sides (when the flipping page is over it)
+		// value : 0.1 - 1
+		shadowSides : 0.2,
+		// opacity value for the "shadow" on the flipping page (while it is flipping)
+		// value : 0.1 - 1
+		shadowFlip : 0.1,
+		// perspective value
+		perspective : 1300,
+		// if we should show the first item after reaching the end
+		circular : false,
+		// if we want to specify a selector that triggers the next() function. example: '#bb-nav-next'
+		nextEl : '',
+		// if we want to specify a selector that triggers the prev() function
+		prevEl : '',
+		// autoplay. If true it overwrites the circular option to true
+		autoplay : false,
+		// time (ms) between page switch, if autoplay is true
+		interval : 3000,
+		//if we want to navigate the slides with the keyboard arrows
+		keyboard : true,
+		// callback after the flip transition
+		// old is the index of the previous item
+		// page is the current item's index
+		// isLimit is true if the current page is the last one (or the first one)
+		onEndFlip : function(old, page, isLimit) {
+			return false;
+		},
+		// callback before the flip transition
+		// page is the current item's index
+		onBeforeFlip : function(page) {
+			return false;
+		}
+	};
+
+	$.BookBlock.prototype = {
+
+		_init: function(options) {
+
+			// options
+			this.options = $.extend(true, {}, $.BookBlock.defaults, options);
+			// set the perspective
+			this.$el.css('perspective', this.options.perspective);
+			// items
+			this.$items = this.$el.children('.bb-item');
+			// total items
+			this.itemsCount = this.$items.length;
+			// current item's index
+			this.current = 0;
+			// previous item's index
+			this.previous = -1;
+			// show first item
+			this.$current = this.$items.eq(this.current).show();
+			// get width of this.$el
+			// this will be necessary to create the flipping layout
+			this.elWidth = this.$el.width();
+			var transEndEventNames = {
+				'WebkitTransition': 'webkitTransitionEnd',
+				'MozTransition': 'transitionend',
+				'OTransition': 'oTransitionEnd',
+				'msTransition': 'MSTransitionEnd',
+				'transition': 'transitionend'
+			};
+			this.transEndEventName = transEndEventNames[Modernizr.prefixed('transition')] + '.bookblock';
+			// support (3dtransforms && transitions)
+			this.support = Modernizr.csstransitions && Modernizr.csstransforms3d;
+			// initialize/bind some events
+			this._initEvents();
+			// start slideshow
+			if (this.options.autoplay) {
+
+				this.options.circular = true;
+				this._startSlideshow();
+
+			}
+
+		},
+		_initEvents: function() {
+
+			var self = this;
+
+			if (this.options.nextEl !== '') {
+
+				$(this.options.nextEl).on('click.bookblock', function() {
+
+					self._action('next');
+					return false;
+
+				});
+
+			}
+
+			if (this.options.prevEl !== '') {
+
+				$(this.options.prevEl).on('click.bookblock', function() {
+
+					self._action('prev');
+					return false;
+
+				});
+
+			}
+
+			if (this.options.keyboard == true) {
+				$(document).keydown(function(e) {
+					var keyCode = e.keyCode || e.which,
+						arrow = {
+							left : 37,
+							up : 38,
+							right : 39,
+							down : 40
+						};
+
+					switch (keyCode) {
+						case arrow.left:
+							self._action('prev');
+							break;
+						case arrow.right:
+							self._action('next');
+							break;
+					}
+				});
+			}
+
+			$window.on( 'debouncedresize', function() {
+							
+				// update width value
+				self.elWidth = self.$el.width();
+
+			} )
+
+		},
+		_action : function(dir, page) {
+
+			this._stopSlideshow();
+			this._navigate(dir, page);
+
+		},
+		_navigate: function(dir, page) {
+
+			if (this.isAnimating) {
+				return false;
+			}
+
+			// callback trigger
+			this.options.onBeforeFlip(this.current);
+
+			this.isAnimating = true;
+			this.$current = this.$items.eq(this.current);
+
+			if (page !== undefined) {
+
+				this.current = page;
+
+			} else if (dir === 'next') {
+
+				if (!this.options.circular && this.current === this.itemsCount - 1) {
+
+					this.end = true;
+
+				} else {
+
+					this.previous = this.current;
+					this.current = this.current < this.itemsCount - 1 ? this.current + 1 : 0;
+
+				}
+
+			} else if (dir === 'prev') {
+
+				if (!this.options.circular && this.current === 0) {
+
+					this.end = true;
+
+				} else {
+
+					this.previous = this.current;
+					this.current = this.current > 0 ? this.current - 1 : this.itemsCount - 1;
+
+				}
+
+			}
+
+			this.$nextItem = !this.options.circular && this.end ? this.$current : this.$items.eq(this.current);
+			
+			if (!this.support) {
+
+				this._layoutNoSupport(dir);
+
+			} else {
+
+				this._layout(dir);
+
+			}
+
+		},
+		// with no support we consider no 3d transforms and transitions
+		_layoutNoSupport: function(dir) {
+
+			this.$items.hide();
+			this.$nextItem.show();
+			this.end = false;
+			this.isAnimating = false;
+			var isLimit = dir === 'next' && this.current === this.itemsCount - 1 || dir === 'prev' && this.current === 0;
+			// callback trigger
+			this.options.onEndFlip(this.previous, this.current, isLimit);
+
+		},
+		// creates the necessary layout for the 3d animation, and triggers the transitions
+		_layout: function(dir) {
+
+			var self = this,
+
+				// basic structure:
+				// 1 element for the left side.
+				$s_left = this._addSide('left', dir),
+				// 1 element for the flipping/middle page
+				$s_middle = this._addSide('middle', dir),
+				// 1 element for the right side
+				$s_right = this._addSide('right', dir),
+				// overlays
+				$o_left = $s_left.find('div.bb-overlay'),
+				$o_middle_f = $s_middle.find('div.bb-flipoverlay:first'),
+				$o_middle_b = $s_middle.find('div.bb-flipoverlay:last'),
+				$o_right = $s_right.find('div.bb-overlay'),
+				speed = this.end ? 400 : this.options.speed;
+
+			this.$items.hide();
+			this.$el.prepend($s_left, $s_middle, $s_right);
+
+			$s_middle.css({
+				transition: 'all ' + speed + 'ms ' + this.options.easing
+			}).on(this.transEndEventName, function(event) {
+
+				if (event.target.className === 'bb-page') {
+
+					self.$el.children('div.bb-page').remove();
+					self.$nextItem.show();
+
+					self.end = false;
+					self.isAnimating = false;
+
+					var isLimit = dir === 'next' && self.current === self.itemsCount - 1 || dir === 'prev' && self.current === 0;
+
+					// callback trigger
+					self.options.onEndFlip(self.previous, self.current, isLimit);
+
+				}
+
+			});
+
+			if (dir === 'prev') {
+				$s_middle.css({ transform: 'rotateY(-180deg)' });
+			}
+
+			// overlays
+			if (this.options.shadows && !this.end) {
+
+				var o_left_style = (dir === 'next') ? {
+					transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear' + ' ' + this.options.speed / 2 + 'ms'
+				} : {
+					transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear',
+					opacity: this.options.shadowSides
+				},
+					o_middle_f_style = (dir === 'next') ? {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear'
+					} : {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear' + ' ' + this.options.speed / 2 + 'ms',
+						opacity: this.options.shadowFlip
+					},
+					o_middle_b_style = (dir === 'next') ? {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear' + ' ' + this.options.speed / 2 + 'ms',
+						opacity: this.options.shadowFlip
+					} : {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear'
+					},
+					o_right_style = (dir === 'next') ? {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear',
+						opacity: this.options.shadowSides
+					} : {
+						transition: 'opacity ' + this.options.speed / 2 + 'ms ' + 'linear' + ' ' + this.options.speed / 2 + 'ms'
+					};
+
+				$o_middle_f.css(o_middle_f_style);
+				$o_middle_b.css(o_middle_b_style);
+				$o_left.css(o_left_style);
+				$o_right.css(o_right_style);
+
+			}
+
+			setTimeout(function() {
+
+				var style = dir === 'next' ? 'rotateY(-180deg)' : 'rotateY(0deg)';
+
+				if (self.end) {
+					// first && last pages lift up 15 deg when we can't go further
+					style = dir === 'next' ? 'rotateY(-15deg)' : 'rotateY(-165deg)';
+				}
+
+				$s_middle.css({transform: style});
+
+				// overlays
+				if (self.options.shadows && !self.end) {
+
+					$o_middle_f.css({
+						opacity: dir === 'next' ? self.options.shadowFlip : 0
+					});
+
+					$o_middle_b.css({
+						opacity: dir === 'next' ? 0 : self.options.shadowFlip
+					});
+
+					$o_left.css({
+						opacity: dir === 'next' ? self.options.shadowSides : 0
+					});
+
+					$o_right.css({
+						opacity: dir === 'next' ? 0 : self.options.shadowSides
+					});
+
+				}
+
+
+			}, 30);
+
+		},
+		// adds the necessary sides (bb-page) to the layout 
+		_addSide: function(side, dir) {
+
+			var $side;
+
+			switch (side) {
+
+			case 'left':
+					/*
+					<div class="bb-page" style="z-index:2;">
+						<div class="bb-back">
+							<div class="bb-outer">
+								<div class="bb-content">
+									<div class="bb-inner">
+										dir==='next' ? [content of current page] : [content of next page]
+									</div>
+								</div>
+								<div class="bb-overlay"></div>
+							</div>
+						</div>
+					</div>
+					*/
+				$side = $('<div class="bb-page"><div class="bb-back"><div class="bb-outer"><div class="bb-content" style="width:' + this.elWidth + 'px"><div class="bb-inner">' + (dir === 'next' ? this.$current.html() : this.$nextItem.html()) + '</div></div><div class="bb-overlay"></div></div></div></div>').css('z-index', 102);
+				break;
+
+			case 'middle':
+					/*
+					<div class="bb-page" style="z-index:3;">
+						<div class="bb-front">
+							<div class="bb-outer">
+								<div class="bb-content">
+									<div class="bb-inner">
+										dir==='next' ? [content of current page] : [content of next page]
+									</div>
+								</div>
+								<div class="bb-flipoverlay"></div>
+							</div>
+						</div>
+						<div class="bb-back">
+							<div class="bb-outer">
+								<div class="bb-content">
+									<div class="bb-inner">
+										dir==='next' ? [content of next page] : [content of current page]
+									</div>
+								</div>
+								<div class="bb-flipoverlay"></div>
+							</div>
+						</div>
+					</div>
+					*/
+				$side = $('<div class="bb-page"><div class="bb-front"><div class="bb-outer"><div class="bb-content" style="left:' + (-this.elWidth / 2) + 'px;width:' + this.elWidth + 'px"><div class="bb-inner">' + (dir === 'next' ? this.$current.html() : this.$nextItem.html()) + '</div></div><div class="bb-flipoverlay"></div></div></div><div class="bb-back"><div class="bb-outer"><div class="bb-content" style="width:' + this.elWidth + 'px"><div class="bb-inner">' + (dir === 'next' ? this.$nextItem.html() : this.$current.html()) + '</div></div><div class="bb-flipoverlay"></div></div></div></div>').css('z-index', 103);
+				break;
+
+			case 'right':
+					/*
+					<div class="bb-page" style="z-index:1;">
+						<div class="bb-front">
+							<div class="bb-outer">
+								<div class="bb-content">
+									<div class="bb-inner">
+										dir==='next' ? [content of next page] : [content of current page]
+									</div>
+								</div>
+								<div class="bb-overlay"></div>
+							</div>
+						</div>
+					</div>
+					*/
+				$side = $('<div class="bb-page"><div class="bb-front"><div class="bb-outer"><div class="bb-content" style="left:' + (-this.elWidth / 2) + 'px;width:' + this.elWidth + 'px"><div class="bb-inner">' + (dir === 'next' ? this.$nextItem.html() : this.$current.html()) + '</div></div><div class="bb-overlay"></div></div></div></div>').css('z-index', 101);
+				break;
+
+			}
+
+			return $side;
+
+		},
+		_startSlideshow: function() {
+
+			var self = this;
+
+			this.slideshow = setTimeout(function() {
+
+				self._navigate('next');
+
+				if (self.options.autoplay) {
+					self._startSlideshow();
+				}
+
+			}, this.options.interval);
+
+		},
+		_stopSlideshow: function() {
+
+			if (this.options.autoplay) {
+
+				clearTimeout(this.slideshow);
+				this.options.autoplay = false;
+
+			}
+
+		},
+		// public method: flips next
+		next: function() {
+			this._action('next');
+		},
+		// public method: flips back
+		prev: function() {
+			this._action('prev');
+		},
+		// public method: goes to a specific page
+		jump: function(page) {
+
+			page -= 1;
+
+			if (page === this.current || page >= this.itemsCount || page < 0) {
+				return false;
+			}
+
+			this._action(page > this.current ? 'next' : 'prev', page);
+
+		},
+		// public method: check if isAnimating is true
+		isActive: function() {
+			return this.isAnimating;
+		},
+		// public method: dynamically adds new elements
+		// call this method after inserting new "bb-item" elements inside the BookBlock
+		update : function () {
+
+			var $currentItem = this.$items.eq( this.current );
+			this.$items = this.$el.children('.bb-item');
+			this.itemsCount = this.$items.length;
+			this.current = $currentItem.index();
+
+		}
+
+	};
+
+	var logError = function(message) {
+		if (window.console) {
+			window.console.error(message);
+		}
+	};
+
+	$.fn.bookblock = function(options) {
+
+		var instance = $.data(this, 'bookblock');
+
+		if (typeof options === 'string') {
+
+			var args = Array.prototype.slice.call(arguments, 1);
+
+			this.each(function() {
+
+				if (!instance) {
+
+					logError("cannot call methods on bookblock prior to initialization; " + "attempted to call method '" + options + "'");
+					return;
+
+				}
+
+				if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
+
+					logError("no such method '" + options + "' for bookblock instance");
+					return;
+
+				}
+
+				instance[options].apply(instance, args);
+
+			});
+
+		} else {
+
+			this.each(function() {
+
+				if (instance) {
+
+					instance._init();
+
+				} else {
+
+					instance = $.data(this, 'bookblock', new $.BookBlock(options, this));
+
+				}
+
+			});
+
+		}
+
+		return instance;
+
+	};
+
+})(jQuery, window);
+
+		
+		</script>
+		<script>
+		var Page = (function() {
+
+	var $container = $( '#container' ),
+		$bookBlock = $( '#bb-bookblock' ),
+		$items = $bookBlock.children(),
+		itemsCount = $items.length,
+		current = 0,
+		bb = $( '#bb-bookblock' ).bookblock( {
+			speed : 800,
+			perspective : 2000,
+			shadowSides	: 0.8,
+			shadowFlip	: 0.4,
+			onEndFlip : function(old, page, isLimit) {
+				
+				current = page;
+				// update TOC current
+				updateTOC();
+				// updateNavigation
+				updateNavigation( isLimit );
+				// initialize jScrollPane on the content div for the new item
+				setJSP( 'init' );
+				// destroy jScrollPane on the content div for the old item
+				setJSP( 'destroy', old );
+
+			}
+		} ),
+		$navNext = $( '#bb-nav-next' ),
+		$navPrev = $( '#bb-nav-prev' ).hide(),
+		$menuItems = $container.find( 'ul.menu-toc > li' ),
+		$tblcontents = $( '#tblcontents' ),
+		transEndEventNames = {
+			'WebkitTransition': 'webkitTransitionEnd',
+			'MozTransition': 'transitionend',
+			'OTransition': 'oTransitionEnd',
+			'msTransition': 'MSTransitionEnd',
+			'transition': 'transitionend'
+		},
+		transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+		supportTransitions = Modernizr.csstransitions;
+
+	function init() {
+
+		// initialize jScrollPane on the content div of the first item
+		setJSP( 'init' );
+		initEvents();
+
+	}
+	
+	function initEvents() {
+
+		// add navigation events
+		$navNext.on( 'click', function() {
+			bb.next();
+			return false;
+		} );
+
+		$navPrev.on( 'click', function() {
+			bb.prev();
+			return false;
+		} );
+		
+		// add swipe events
+		$items.on( {
+			'swipeleft'		: function( event ) {
+				if( $container.data( 'opened' ) ) {
+					return false;
+				}
+				bb.next();
+				return false;
+			},
+			'swiperight'	: function( event ) {
+				if( $container.data( 'opened' ) ) {
+					return false;
+				}
+				bb.prev();
+				return false;
+			}
+		} );
+
+		// show table of contents
+		$tblcontents.on( 'click', toggleTOC );
+
+		// click a menu item
+		$menuItems.on( 'click', function() {
+
+			var $el = $( this ),
+				idx = $el.index(),
+				jump = function() {
+					bb.jump( idx + 1 );
+				};
+			
+			current !== idx ? closeTOC( jump ) : closeTOC();
+
+			return false;
+			
+		} );
+
+		// reinit jScrollPane on window resize
+		$( window ).on( 'debouncedresize', function() {
+			// reinitialise jScrollPane on the content div
+			setJSP( 'reinit' );
+		} );
+
+	}
+
+	function setJSP( action, idx ) {
+		
+		var idx = idx === undefined ? current : idx,
+			$content = $items.eq( idx ).children( 'div.content' ),
+			apiJSP = $content.data( 'jsp' );
+		
+		if( action === 'init' && apiJSP === undefined ) {
+			$content.jScrollPane({verticalGutter : 0, hideFocus : true });
+		}
+		else if( action === 'reinit' && apiJSP !== undefined ) {
+			apiJSP.reinitialise();
+		}
+		else if( action === 'destroy' && apiJSP !== undefined ) {
+			apiJSP.destroy();
+		}
+
+	}
+
+	function updateTOC() {
+		$menuItems.removeClass( 'menu-toc-current' ).eq( current ).addClass( 'menu-toc-current' );
+	}
+
+	function updateNavigation( isLastPage ) {
+		
+		if( current === 0 ) {
+			$navNext.show();
+			$navPrev.hide();
+		}
+		else if( isLastPage ) {
+			$navNext.hide();
+			$navPrev.show();
+		}
+		else {
+			$navNext.show();
+			$navPrev.show();
+		}
+
+	}
+
+	function toggleTOC() {
+		var opened = $container.data( 'opened' );
+		opened ? closeTOC() : openTOC();
+	}
+
+	function openTOC() {
+		$navNext.hide();
+		$navPrev.hide();
+		$container.addClass( 'slideRight' ).data( 'opened', true );
+	}
+
+	function closeTOC( callback ) {
+
+		updateNavigation( current === itemsCount - 1 );
+		$container.removeClass( 'slideRight' ).data( 'opened', false );
+		if( callback ) {
+			if( supportTransitions ) {
+				$container.on( transEndEventName, function() {
+					$( this ).off( transEndEventName );
+					callback.call();
+				} );
+			}
+			else {
+				callback.call();
+			}
+		}
+
+	}
+
+	return { init : init };
+
+})();
+		
+		</script>
+		<script>
+			$(function() {
+
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>	
